@@ -1,6 +1,5 @@
 from typing import Union, List
 from fastapi import FastAPI, APIRouter, Request
-from pydantic import BaseModel, Field
 
 router = APIRouter()
 
