@@ -1,6 +1,6 @@
 from typing import Union
 from fastapi import FastAPI, Request
-from app.api.v1.endpoints import models, items, second,  third, fourth, fifth, sixth, seventh
+from app.api.v1.endpoints import models, items, second,  third, fourth, fifth, sixth, seventh, stream
 
 app = FastAPI()
 
@@ -14,6 +14,7 @@ app.include_router(fourth.router, prefix="/fourth", tags=["0704: クエリパラ
 app.include_router(fifth.router, prefix="/fifth", tags=["0711: パスパラメータと数値の検証"])
 app.include_router(sixth.router, prefix="/sixth", tags=["0719: ボディ - 複数のパラメータ"])
 app.include_router(seventh.router, prefix="/seventh", tags=["0719: ボディ -フィールドとバリデーション"])
+app.include_router(stream.router, prefix="/stream", tags=["0730: ストリーミング"])
 
 
 @app.get("/")
